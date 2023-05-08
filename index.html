@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KITS</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/x-icon" href="/images/favicon.png" />
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="header-title">DEVERA</h1>
+      <div class="header-nav">
+        <span><a href="">Hotest</a></span>
+        <span><a href="">Best Seller</a></span>
+        <span><a href="">Trending</a></span>
+        <span><a href="">Sport</a></span>
+        <span><a href="">Music</a></span>
+      </div>
+    </header>
+    <section>
+      <form action="/action_page.php">
+        <h1 class="content-title">Add Product</h1>
+        <div class="content">
+          <div class="content-left">
+            <div class="content-left-item">
+              <label for="taste_1">Product name</label>
+              <input
+                type="text"
+                id="taste_1"
+                name="taste_cherry"
+                placeholder="name"
+              />
+            </div>
+            <div class="content-left-item">
+              <label for="taste_1">Price</label>
+              <input
+                type="number"
+                id="taste_1"
+                name="taste_cherry"
+                value="12"
+              />
+            </div>
+            <div class="content-left-item">
+              <label for="w3review">Description:</label>
+
+              <textarea
+                id="w3review"
+                placeholder="Describe yourself here..."
+                name="w3review"
+                rows="4"
+                cols="30"
+              >
+              </textarea>
+            </div>
+            <div class="content-left-item">
+              <label for="w3review">Image</label>
+              <img src="images/a.jpg" alt="" width="100px" height="100px" />
+            </div>
+            <div class="content-left-item-bottom">
+              <input type="radio" id="html" name="fav_language" value="HTML" />
+              <label for="html">China</label><br />
+              <input type="radio" id="html" name="fav_language" value="HTML" />
+              <label for="html">Vietnam</label><br />
+            </div>
+          </div>
+          <div class="content-right">
+            <div>
+              <label for="cars">Category:</label>
+
+              <select name="cars" id="cars">
+                <option value="volvo">Volvo</option>
+                <option value="saab">Saab</option>
+                <option value="mercedes">Mercedes</option>
+                <option value="audi">Audi</option>
+              </select>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                id="vehicle1"
+                name="vehicle1"
+                value="Bike"
+              />
+              <label for="vehicle1"> Free ship</label><br />
+            </div>
+            <button class="content-right-btn">Create</button>
+          </div>
+        </div>
+      </form>
+    </section>
+    <footer>
+      <h3 class="footer-title">KITS 2023</h3>
+    </footer>
+  </body>
+</html>

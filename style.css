@@ -1,0 +1,38 @@
+.content {
+  display: flex;
+}
+
+.content-left {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+}
+
+.content-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 60px;
+}
+.header-nav span {
+  padding-right: 50px;
+}
+.header {
+  margin-bottom: 30px;
+}
+.footer-title {
+  padding-left: 10%;
+}
+
+.content-left-item label {
+  display: inline-block;
+  width: 100px;
+}
+
+.content-left-item {
+  margin-bottom: 50px;
+}
+.content-left-item-bottom {
+  margin-left: 100px;
+}
