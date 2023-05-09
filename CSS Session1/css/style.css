@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: "Poppins", sans-serif;
+}
+
 .header {
   text-align: center;
   padding: 20px 0px;
@@ -55,6 +59,7 @@
 .content {
   text-align: center;
   margin-top: 50px;
+  padding-bottom: 500px;
 }
 .content-title {
   font-size: 14px;
