@@ -7,6 +7,13 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/reset.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
     <div class="wrapper">
@@ -25,17 +32,17 @@
 
           <li class="sidebar-list-item">
             <a href="https://www.facebook.com/"
-              ><img src="images/1.svg" alt="" srcset="" />
+              ><img src="images/ngoinha.svg" alt="" srcset="" />
             </a>
           </li>
           <li class="sidebar-list-item">
             <a href="https://www.facebook.com/"
-              ><img src="images/1.svg" alt="" srcset="" />
+              ><img src="images/caichuong.svg" alt="" srcset="" />
             </a>
           </li>
           <li class="sidebar-list-item">
             <a href="https://www.facebook.com/"
-              ><img src="images/1.svg" alt="" srcset="" />
+              ><img src="images/cap.svg" alt="" srcset="" />
             </a>
           </li>
           <li class="sidebar-list-item">
@@ -45,16 +52,17 @@
           </li>
           <li>
             <a href="https://www.facebook.com/"
-              ><img src="images/1.svg" alt="" srcset="" />
+              ><img src="images/user.svg" alt="" srcset="" />
             </a>
           </li>
         </ul>
         <div class="sidebar-bottom">
-          <a href="https://www.facebook.com/">
+          <div class="sidebar-bottom-icon">
             <img src="images/3.svg" alt="" srcset="" />
-          </a>
+          </div>
         </div>
       </div>
+
       <div class="setting">
         <div class="setting-top">
           <img src="images/arrow.svg" alt="" class="setting-img" />
@@ -62,24 +70,24 @@
         </div>
         <ul class="setting-list">
           <li class="setting-list-item">
-            <img src="images/1.svg" alt="" srcset="" />
-            <div>dasdad</div>
+            <img src="images/butchi.svg" alt="" srcset="" />
+            <div class="text-setting">Edit profiles</div>
           </li>
           <li class="setting-list-item">
-            <img src="images/1.svg" alt="" srcset="" />
-            <div>dasdad</div>
+            <img src="images/caichuongsetting.svg" alt="" srcset="" />
+            <div class="text-setting">Notification</div>
           </li>
           <li class="setting-list-item">
-            <img src="images/1.svg" alt="" srcset="" />
-            <div>dasdad</div>
+            <img src="images/security.svg" alt="" srcset="" />
+            <div class="text-setting">Security</div>
           </li>
           <li class="setting-list-item">
-            <img src="images/1.svg" alt="" srcset="" />
-            <div>dasdad</div>
+            <img src="images/luoicuasetting.svg" alt="" srcset="" />
+            <div class="text-setting">Appearance</div>
           </li>
           <li class="setting-list-item">
-            <img src="images/1.svg" alt="" srcset="" />
-            <div>dasdad</div>
+            <img src="images/help.svg" alt="" srcset="" />
+            <div class="text-setting">Help</div>
           </li>
         </ul>
       </div>
@@ -93,6 +101,77 @@
             class="content-top-logo"
           />
         </div>
+        <form action="/action_page.php">
+          <div class="mb row">
+            <div class="col-6">
+              <label for="fname" class="text-main">First Name</label>
+              <input
+                type="text"
+                id="fname"
+                name="firstname"
+                placeholder="Khuong"
+              />
+            </div>
+            <div class="col-6">
+              <label for="lname" class="text-main">Last Name</label>
+              <input
+                type="text"
+                id="lname"
+                name="lastname"
+                placeholder="Trong"
+              />
+            </div>
+          </div>
+
+          <div class="mb col-12 input-email">
+            <label for="fname" class="text-main">Email</label>
+            <input
+              type="text"
+              id="email"
+              name="email"
+              placeholder="khuong30082000@gmail.com"
+            />
+            <div class="icon">
+              <i class="fa-solid fa-check"></i>
+            </div>
+          </div>
+          <div class="mb col-12">
+            <label for="fname" class="text-main">Address</label>
+            <input
+              type="text"
+              id="fname"
+              name="firstname"
+              placeholder="GIANG HO QUAN 4"
+            />
+          </div>
+          <div class="mb col-12">
+            <label for="fname" class="text-main">Contact Number</label>
+            <input
+              type="text"
+              id="fname"
+              name="firstname"
+              placeholder="9999999999"
+            />
+          </div>
+          <div class="row">
+            <div class="col-6">
+              <label for="lname" class="text-main">City</label>
+              <select name="" id="" value="">
+                <option value=""></option>
+                <option value="volvo">Volvo</option>
+                <option value="saab">Saab</option>
+                <option value="mercedes">Mercedes</option>
+                <option value="audi">Audi</option>
+              </select>
+            </div>
+          </div>
+          <div class="content-btn">
+            <div class="col-6 flex-btn">
+              <button class="btn btn-cancel">Cancel</button>
+              <button class="btn btn-save">Save</button>
+            </div>
+          </div>
+        </form>
       </div>
     </div>
   </body>
