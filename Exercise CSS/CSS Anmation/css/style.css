@@ -1,0 +1,39 @@
+.child-1 {
+}
+.child-2 {
+}
+
+.child-3 {
+}
+.child-6 {
+  animation: graduallyClear 6s linear;
+}
+
+.parent {
+  margin: 300px;
+}
+.parent:hover .child-1 {
+  transform: rotate(10deg);
+}
+.parent:hover .child-2 {
+  transform: rotate(20deg);
+}
+
+.parent:hover .child-3 {
+  transform: rotate(30deg);
+}
+
+img {
+  object-fit: cover;
+  transition-duration: 1s;
+  transform-origin: 0 0;
+}
+
+@keyframes graduallyClear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
