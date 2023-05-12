@@ -815,6 +815,10 @@ body::-webkit-scrollbar-track {
   .customer-item-start {
     transform: translateY(20px);
   }
+  .footer-right {
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 
 .banner-box:hover {
