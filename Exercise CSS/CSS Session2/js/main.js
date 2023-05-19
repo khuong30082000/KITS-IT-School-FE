@@ -13,6 +13,7 @@ const inputContactNumber = document.getElementById("contactnumber");
 const selectForm = document.getElementById("selectForm");
 const iconCheck = document.querySelector(".icon");
 const allInput = document.querySelectorAll("input");
+const btnLogout = document.querySelector(".btn-logout");
 
 handleClickSetting = () => {
   setting.classList.add("hide-setting");
@@ -108,7 +109,6 @@ const obj = JSON.parse(localStorage.getItem("access_token")); //parse chuoi stri
 const data = JSON.parse(localStorage.getItem("user_login"));
 const sidebarlogo = document.querySelector(".content-top-logo");
 const contentTopName = document.querySelector(".content-top-name");
-console.log(data);
 
 if (data) {
   sidebarlogo.src = data.image;
@@ -118,3 +118,9 @@ if (data) {
 if (!obj) {
   window.location.assign("login.html");
 }
+
+btnLogout.addEventListener("click", function (e) {
+  e.preventDefault();
+  localStorage.clear();
+  window.location.assign("login.html");
+});

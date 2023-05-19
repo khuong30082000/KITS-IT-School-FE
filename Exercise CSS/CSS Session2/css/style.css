@@ -198,6 +198,7 @@ select {
   background-color: transparent;
   border-radius: 5px;
   font-size: 15px;
+  margin-right: 20px;
 }
 .btn-cancel {
   border: 2px solid rgb(255, 112, 8);
@@ -382,4 +383,11 @@ select:focus {
   font-weight: bold;
   font-size: 30px;
   margin-right: 20px;
+}
+
+.btn-logout {
+  border-radius: 50%;
+  background-color: red;
+  border: none;
+  color: white;
 }

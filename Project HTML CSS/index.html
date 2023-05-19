@@ -471,16 +471,14 @@
         }
       });
 
+      const bestsellingRight = document.querySelector(".bestselling-right");
+      bestsellingRight.innerHTML = "<h1>LOADING...</h1>";
       window.addEventListener("load", (event) => {
         fetch("https://fakestoreapi.com/products?limit=6")
           .then((res) => res.json())
           .then((data) => {
-            const bestsellingRight =
-              document.querySelector(".bestselling-right");
-
             let result = "";
             data.forEach((element) => {
-              console.log(element);
               result += ` <div class="bestselling-img">
               <img src="${element.image}" alt="" srcset="" />
               <div class="bestselling-right-text">Natural Plants</div>
