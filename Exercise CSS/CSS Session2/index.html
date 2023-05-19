@@ -69,7 +69,7 @@
           <span class="setting-title">settings</span>
         </div>
         <ul class="setting-list">
-          <li class="setting-list-item">
+          <li class="setting-list-item active">
             <img src="images/butchi.svg" alt="" srcset="" />
             <div class="text-setting">Edit profiles</div>
           </li>
@@ -94,6 +94,8 @@
       <div class="content">
         <div class="content-top">
           <h1 class="content-top-title hide">Edit profile</h1>
+
+          <h1 class="content-top-name">safsa</h1>
           <img
             src="images/logoEdit.svg"
             alt=""
@@ -101,7 +103,7 @@
             class="content-top-logo"
           />
         </div>
-        <form action="/action_page.php">
+        <form id="myForm">
           <div class="mb row">
             <div class="col-6">
               <label for="fname" class="text-main">First Name</label>
@@ -129,18 +131,20 @@
               type="text"
               id="email"
               name="email"
+              class="input-email"
               placeholder="khuong30082000@gmail.com"
             />
-            <div class="icon">
-              <i class="fa-solid fa-check"></i>
+            <div class="input-icons">
+              <i class="fa fa-check"></i>
+              <i class="fas fa-exclamation"></i>
             </div>
           </div>
           <div class="mb col-12">
             <label for="fname" class="text-main">Address</label>
             <input
               type="text"
-              id="fname"
-              name="firstname"
+              id="address"
+              name="address"
               placeholder="GIANG HO QUAN 4"
             />
           </div>
@@ -148,15 +152,15 @@
             <label for="fname" class="text-main">Contact Number</label>
             <input
               type="text"
-              id="fname"
-              name="firstname"
+              id="contactnumber"
+              name="contactnumber"
               placeholder="9999999999"
             />
           </div>
           <div class="row">
             <div class="col-6">
               <label for="lname" class="text-main">City</label>
-              <select name="" id="" value="">
+              <select name="" id="selectForm" value="">
                 <option value=""></option>
                 <option value="volvo">Volvo</option>
                 <option value="saab">Saab</option>
@@ -174,5 +178,7 @@
         </form>
       </div>
     </div>
+
+    <script src="js/main.js"></script>
   </body>
 </html>

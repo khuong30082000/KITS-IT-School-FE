@@ -69,15 +69,19 @@
                   srcset=""
                   class="menu-icon-img"
                 />
+                <div class="tooltip">Tôi là xe đẩy</div>
               </li>
               <li class="menu-icon-item">
                 <img src="images/user.svg" alt="" srcset="" />
+                <div class="tooltip">Tôi là người dùng</div>
               </li>
               <li class="menu-icon-item">
                 <img src="images/Line 1.svg" alt="" srcset="" />
+                <div class="tooltip">Tôi là dấu xẹc</div>
               </li>
               <li class="menu-icon-item">
                 <img src="images/3daugach.svg" alt="" srcset="" />
+                <div class="tooltip">Tôi là 3 dấu</div>
               </li>
             </ul>
           </div>
@@ -129,7 +133,7 @@
               <button class="btn btn-more">See more</button>
             </div>
             <div class="bestselling-right">
-              <div class="bestselling-img">
+              <!-- <div class="bestselling-img">
                 <img src="images/anh1.svg" alt="" srcset="" />
                 <div class="bestselling-right-text">Natural Plants</div>
                 <div class="bestselling-right-price">140.000đ</div>
@@ -158,7 +162,7 @@
                 <img src="images/anh6.svg" alt="" srcset="" />
                 <div class="bestselling-right-text">Artificial Plants</div>
                 <div class="bestselling-right-price">140.000</div>
-              </div>
+              </div> -->
             </div>
           </div>
         </div>
@@ -465,6 +469,27 @@
         if (!menu.contains(e.target) && !e.target.matches(".menu-toggle")) {
           menu.classList.remove(activeClass);
         }
+      });
+
+      window.addEventListener("load", (event) => {
+        fetch("https://fakestoreapi.com/products?limit=6")
+          .then((res) => res.json())
+          .then((data) => {
+            const bestsellingRight =
+              document.querySelector(".bestselling-right");
+
+            let result = "";
+            data.forEach((element) => {
+              console.log(element);
+              result += ` <div class="bestselling-img">
+              <img src="${element.image}" alt="" srcset="" />
+              <div class="bestselling-right-text">Natural Plants</div>
+              <div class="bestselling-right-price">140.000đ</div>
+            </div>`;
+            });
+
+            bestsellingRight.innerHTML = result;
+          });
       });
     </script>
   </body>

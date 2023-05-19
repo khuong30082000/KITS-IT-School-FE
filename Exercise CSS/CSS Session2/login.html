@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/login.css" />
+    <link rel="stylesheet" href="css/reset.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="container">
+        <div class="content-top"></div>
+        <div class="content">
+          <div class="content-heading">Log in</div>
+          <form class="form-login">
+            <div class="content-username column">
+              <label for="username">Username</label>
+              <input
+                type="text"
+                id="username"
+                name="username"
+                placeholder="username"
+              />
+            </div>
+            <div class="content-password column">
+              <div class="label-password">
+                <label for="password">Password</label>
+                <label for="" class="forgotpassword">Forgot Password?</label>
+              </div>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="enter your password"
+              />
+              <div class="input-icons">
+                <!-- <img src="images/eye-open.png" alt="" srcset="" /> -->
+                <img src="images/eye-hide.svg" alt="" srcset="" id="eye-hide" />
+              </div>
+            </div>
+            <div class="btn btn-login" id="login">Login In</div>
+          </form>
+          <div class="content-bottom">
+            <div class="content-bottom-top">or continues with</div>
+            <div class="content-bottom-social">
+              <div class="content-social-item">
+                <img src="images/Google.svg" alt="" srcset="" />
+              </div>
+              <div class="content-social-item">
+                <img src="images/Github.svg" alt="" srcset="" />
+              </div>
+              <div class="content-social-item">
+                <img src="images/Facebook.svg" alt="" srcset="" />
+              </div>
+            </div>
+            <div class="content-bottom-footer">
+              <div>Don't have an account yet ?</div>
+              <span class="content-sign-up">Sign up for free</span>
+            </div>
+          </div>
+          <div class="banner">
+            <div class="laptop-banner">
+              <img src="images/laptopAnh.svg" alt="" srcset="" />
+            </div>
+            <div class="tree-banner">
+              <img src="images/tree.svg" alt="" srcset="" class="tree-banner" />
+            </div>
+          </div>
+        </div>
+        <div class="content-right"></div>
+      </div>
+    </div>
+
+    <script src="js/mainLogin.js"></script>
+  </body>
+</html>
