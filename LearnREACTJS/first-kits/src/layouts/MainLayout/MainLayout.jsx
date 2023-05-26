@@ -11,7 +11,7 @@ const StyledMainLayout = styled.div`
   bottom: 0;
   overflow-y: auto; */
 
-  background: #e5e5e5;
+  background: ${(props) => props.theme.body};
 
   .container {
     display: flex;

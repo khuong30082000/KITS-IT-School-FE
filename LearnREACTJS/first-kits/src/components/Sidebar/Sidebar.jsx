@@ -1,22 +1,26 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
-import styled, { createGlobalStyle } from "styled-components";
-import logo from "assets/img/logo.svg";
+import styled from "styled-components";
 import icon1 from "assets/img/sidebaricon1.svg";
 import icon2 from "assets/img/sidebaricon2.svg";
 import icon3 from "assets/img/sidebaricon3.svg";
-import icon4 from "assets/img/sidebaricon2.svg";
-import icon5 from "assets/img/sidebaricon2.svg";
-import icon6 from "assets/img/sidebaricon2.svg";
+import icon4 from "assets/img/sidebaricon4.svg";
+import icon5 from "assets/img/sidebaricon5.svg";
+import icon6 from "assets/img/sidebaricon6.svg";
+import icon7 from "assets/img/sidebaricon7.svg";
+import icon8 from "assets/img/sibaricon8.svg";
+import icon9 from "assets/img/sibaricon9.svg";
 import urlImgBalance from "assets/img/arrow-right-balance.svg";
 import iconTopUp from "assets/img/icontopup1.svg";
 import ethbalance from "assets/img/ETH balance.svg";
 import moon from "assets/img/moon.svg";
 import light from "assets/img/light.svg";
 import { Button } from "components/shared/Button";
+import { Logo } from "components/Logo";
+import { ThemeContextC } from "context/ThemeContext";
 
 const StyledAsideWrapper = styled.div`
-  .logo {
+  /* .logo {
     display: flex;
     align-items: center;
     gap: 19.29px;
@@ -32,7 +36,7 @@ const StyledAsideWrapper = styled.div`
     font-size: 10px;
     line-height: 13px;
     color: #7a797d;
-  }
+  } */
   .nav {
     /* margin-bottom: 41.5px; */
   }
@@ -195,6 +199,9 @@ const StyledAsideWrapper = styled.div`
     justify-content: center;
     gap: 4px;
   }
+  .light-mode {
+    pointer-events: none;
+  }
 `;
 
 const StyledNavItem = styled.div`
@@ -224,32 +231,37 @@ const StyledNavItem = styled.div`
   }
 `;
 
-const NavItem = ({ text, path, src, pathname }) => {
+const NavItem = ({ text, path, src, className }) => {
   return (
     <StyledNavItem className="icon-div">
-      <NavLink to={path}>
+      <NavLink to={path} className={className}>
         <img src={src} alt="nav-icon"></img>
         {text}
       </NavLink>
     </StyledNavItem>
   );
 };
+const lightTheme = {
+  body: "red",
+};
+
+const darkTheme = {
+  body: "black",
+};
 
 export const Sidebar = () => {
-  const [theme, setTheme] = useState("light");
+  // const isDarkTheme = theme === "dark";
 
-  const classNameLight = theme === "light" ? "btn-light" : "btn-dark";
-  const classNameDark = theme === "light" ? "btn-dark" : "btn-light";
+  const context = useContext(ThemeContextC);
+  console.log(context.theme);
+
+  const classNameLight = context.theme === "light" ? "btn-light" : "btn-dark";
+  const classNameDark = context.theme === "light" ? "btn-dark" : "btn-light";
 
   return (
+    // <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
     <StyledAsideWrapper urlImgBalance={urlImgBalance}>
-      <div className="logo">
-        <img src={logo} alt="logo"></img>
-        <div>
-          <div className="logo-text">MyNFT</div>
-          <div className="logo-desc">NFT Marketplace</div>
-        </div>
-      </div>
+      <Logo mb={54} />
       <div className="nav">
         <NavItem text="Dashboard" path="/dashboard" src={icon1}></NavItem>
         <NavItem text="Market" path="/about" src={icon2}></NavItem>
@@ -260,18 +272,29 @@ export const Sidebar = () => {
         <NavItem text="My Portfolio" path="/" src={icon4}></NavItem>
         <NavItem text="Wallet" path="/" src={icon5}></NavItem>
         <NavItem text="Favourites" path="/" src={icon6}></NavItem>
-        <NavItem text=" History" path="/" src={icon2}></NavItem>
-        <NavItem text="Settings" path="/" src={icon2}></NavItem>
+        <NavItem text=" History" path="/" src={icon8}></NavItem>
+        <NavItem text="Settings" path="/" src={icon7}></NavItem>
       </div>
       <div className="nav-third">
         <div className="nav-second-heading">ORTHER</div>
         <div className="nav-third-group">
-          <NavItem text="Light Mode" path="/" src={icon2}></NavItem>
+          <NavItem
+            text="Light Mode"
+            className="light-mode"
+            path="/"
+            src={icon9}
+          ></NavItem>
           <div className="third-btn">
-            <div className={classNameLight} onClick={() => setTheme("light")}>
+            <div
+              className={classNameLight}
+              onClick={() => context.setTheme("light")}
+            >
               <img src={light} />
             </div>
-            <div className={classNameDark} onClick={() => setTheme("dark")}>
+            <div
+              className={classNameDark}
+              onClick={() => context.setTheme("dark")}
+            >
               <img src={moon} />
             </div>
           </div>
@@ -297,5 +320,6 @@ export const Sidebar = () => {
         <img src={ethbalance} className="eth-balance" />
       </div>
     </StyledAsideWrapper>
+    // </ThemeProvider>
   );
 };

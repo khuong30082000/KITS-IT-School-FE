@@ -34,6 +34,7 @@ export const Button = ({
   fontWeight,
   btnText,
   iconTopUp,
+  className,
   ...rest
 }) => {
   return (
@@ -49,6 +50,7 @@ export const Button = ({
       fontWeight={fontWeight}
       marginRight={mr}
       backdropFilter={backdropFilter}
+      className={className}
       {...rest}
     >
       {percent && (

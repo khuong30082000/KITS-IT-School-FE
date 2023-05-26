@@ -1,8 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import trendingimg1 from "assets/img/trendingimg1.svg";
-import top2 from "assets/img/top2.svg";
-import iconetherum from "assets/img/ETHERUMCURRENT.svg";
 
 const StyledMainArtItem = styled.div`
   width: 348px;
@@ -125,28 +122,28 @@ export const ArtItemContent = ({ ...rest }) => {
   return (
     <>
       <StyledArtItemTop>
-        <img src={trendingimg1} />
+        <img src={rest.trendingAvatar} />
         <div className="content-img">
           <i className="fa-regular fa-clock"></i>
           <div className="content-img-number"> {rest.imgNumber}</div>
         </div>
       </StyledArtItemTop>
       <StyledArtItemBottom>
-        <div class="bottom-content-heading">
-          <div class="bottom-content-title">Ape In Love</div>
-          <div class="bottom-content-like">21,5K Likes</div>
+        <div className="bottom-content-heading">
+          <div className="bottom-content-title">{rest.title}</div>
+          <div class="bottom-content-like">{rest.like}</div>
         </div>
-        <div class="bottom-content-avatar">
-          <img src={top2} />
-          <div class="bottom-content-email">dsada</div>
+        <div className="bottom-content-avatar">
+          <img src={rest.emailAvatar} />
+          <div className="bottom-content-email">{rest.email}</div>
         </div>
-        <div class="bottom-content-eth">
-          <div class="bottom-content-text">Current Bid</div>
-          <div class="bottom-content-group">
-            <img src={iconetherum} />
-            <div class="c">
-              <span>9.10</span>
-              <span>ETH</span>
+        <div className="bottom-content-eth">
+          <div className="bottom-content-text">{rest.textBottom}</div>
+          <div className="bottom-content-group">
+            <img src={rest.avatarETH} />
+            <div className="c">
+              <span>{rest.numberETH}</span>
+              <span>{rest.textETH}</span>
             </div>
           </div>
         </div>
@@ -155,10 +152,21 @@ export const ArtItemContent = ({ ...rest }) => {
   );
 };
 
-export const ArtItem = ({ imgNumber }) => {
+export const ArtItem = ({ ...rest }) => {
   return (
     <StyledMainArtItem>
-      <ArtItemContent imgNumber={imgNumber} />
+      <ArtItemContent
+        imgNumber={rest.imgNumber}
+        trendingAvatar={rest.trendingAvatar}
+        title={rest.title}
+        like={rest.like}
+        emailAvatar={rest.emailAvatar}
+        email={rest.email}
+        textBottom={rest.textBottom}
+        numberETH={rest.numberETH}
+        textETH={rest.textETH}
+        avatarETH={rest.avatarETH}
+      />
     </StyledMainArtItem>
   );
 };
