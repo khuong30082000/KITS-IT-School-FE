@@ -21,7 +21,11 @@
         <div class="header-menu">
           <ul class="menu">
             <li class="menu-item-logo">
-              <a href="#banner" class="menu-link-logo">LuanShop</a>
+              <a
+                href="http://127.0.0.1:5501/Project%20HTML%20CSS/index.html"
+                class="menu-link-logo"
+                >Khuong shop</a
+              >
             </li>
             <li class="menu-item">
               <a href="#banner" class="menu-link">Sales</a>
@@ -35,11 +39,30 @@
 
             <li class="menu-item">
               <a href="#customer" class="menu-link">More</a>
+              <div class="dropdown-content">
+                <a href="#">
+                  <p>First link</p>
+                  <span class="material-symbols-outlined">chevron_right</span>
+                </a>
+                <a href="#">
+                  <p>Second link</p>
+                  <span class="material-symbols-outlined">chevron_right</span>
+                </a>
+                <a href="#">
+                  <p>Third link</p>
+                  <span class="material-symbols-outlined">chevron_right</span>
+                </a>
+              </div>
             </li>
           </ul>
           <div class="menu-action">
             <div class="menu-search">
-              <input type="text" class="input-search" placeholder="Search..." />
+              <input
+                type="text"
+                class="input-search"
+                placeholder="Search..."
+                id="search"
+              />
               <i class="fas fa-search"></i>
             </div>
             <div class="menu-cart">
@@ -49,7 +72,7 @@
                 srcset=""
                 class="menu-cart-img"
               />
-              <span class="menu-cart-number">0</span>
+              <span class="menu-cart-number" id="count">0</span>
             </div>
             <div>
               <img
@@ -70,11 +93,11 @@
 
           <div class="content-bottom">
             <div class="content-bottom-left">
-              <img src="images/image-botttom.svg" alt="" srcset="" />
+              <img src="" alt="" srcset="" />
               <div class="content-bottom-item">
-                <img src="images/bottommitem1.svg" />
+                <!-- <img src="images/bottommitem1.svg" />
                 <img src="images/bottommitem2.svg" />
-                <img src="images/bottommitem3.svg" />
+                <img src="images/bottommitem3.svg" /> -->
               </div>
             </div>
             <div class="content-bottom-right">
@@ -107,5 +130,12 @@
         </div>
       </div>
     </div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+      integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="js/mainDetail.js"></script>
   </body>
 </html>

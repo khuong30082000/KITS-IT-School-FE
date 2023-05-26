@@ -14,6 +14,10 @@ export default class Clock extends Component {
     this.date = '22/8/2022';
   }
 
+  componentDidMount() {
+    this.setState((prev) => console.log(prev));
+  }
+
   getTime() {
     // const newState = {
     //   ...this.state,

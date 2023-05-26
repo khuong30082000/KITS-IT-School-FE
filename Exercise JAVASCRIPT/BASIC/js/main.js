@@ -264,3 +264,30 @@
 
 // const input = [3, 5, 7, 9, 11];
 // console.log(input.splice(1, 2));
+
+class Product {
+  constructor(name, price) {
+    this.name = name || "Nhập tên vào";
+    this.price = price || "Nhập tiền vào";
+    this.arr = ["Còn hàng", "Hết Hàng"];
+  }
+  isInStock() {
+    let randomNumber = Math.floor(Math.random() * this.arr.length);
+    console.log(this.arr[randomNumber]);
+  }
+}
+
+class Mobile extends Product {
+  constructor(name, price, arr, brand) {
+    super(name, price, arr);
+    this.brand = brand;
+  }
+  getBrand = () => {
+    return "brand " + this.brand;
+  };
+}
+
+var mobile1 = new Mobile("Iphone 14 promax  128 GB", 26440000, "apple");
+
+console.log(mobile1.getBrand());
+mobile1.isInStock();

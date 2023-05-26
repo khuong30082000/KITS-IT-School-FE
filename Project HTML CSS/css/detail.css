@@ -3,7 +3,7 @@ html {
 }
 
 .wrapper {
-  background-color: #ffebeb;
+  background-color: #c1dcdc;
   position: fixed;
   top: 0;
   left: 0;
@@ -62,6 +62,41 @@ html {
 }
 .menu-item:nth-child(4) {
   margin-right: 40px;
+}
+
+.menu-item:nth-child(5) {
+  position: relative;
+}
+.menu-item:nth-child(5):hover .dropdown-content {
+  opacity: 1;
+  visibility: visible;
+}
+
+.dropdown-content {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.25s linear;
+  position: absolute;
+  top: 40px;
+  left: 0px;
+  border: 1px solid #efefef;
+  background-color: white;
+  border-radius: 0.4em;
+  min-width: 200px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 12px 12px;
+  z-index: 1;
+}
+
+.menu-item:nth-child(5)::before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  background-image: url("../images/down-arrowmenuu.svg");
+  right: -14px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .menu-search {
@@ -175,6 +210,9 @@ input {
 
 .content-bottom-left img {
   border-radius: 20px;
+  width: 375px;
+  height: 330px;
+  object-fit: cover;
 }
 
 .content-bottom-item img {
@@ -220,7 +258,7 @@ input {
 
 .about-item-dolar span {
   font-weight: 700;
-  font-size: 32px;
+  font-size: 20px;
   line-height: 38px;
   color: #1565c0;
 }
@@ -264,4 +302,78 @@ input {
   justify-content: center;
   align-items: center;
   margin: 0 auto;
+}
+
+@media screen and (max-width: 1023px) {
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 400px;
+  }
+  .menu {
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: white;
+    width: 300px;
+    z-index: 99;
+    border-left: 1px solid #ddd;
+    flex-direction: column;
+    gap: 10px 0;
+    padding-top: 60px;
+    align-items: stretch;
+    transform: translateX(100%);
+    will-change: transform;
+    transition: all 0.2s linear;
+    display: none;
+  }
+  .content-bottom {
+    flex-direction: column;
+    gap: 120px;
+  }
+  .content-right {
+  }
+  .wrapper {
+    overflow-y: scroll;
+  }
+  .container {
+    height: 100%;
+    margin-top: 100px;
+  }
+}
+
+.highlight {
+  background: yellow;
+  font-weight: bold;
+}
+
+.lightbox {
+  position: fixed;
+  z-index: 9999999;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.lightbox-content img {
+  max-height: 400px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+img {
+  cursor: pointer;
 }
